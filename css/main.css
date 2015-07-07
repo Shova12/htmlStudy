@@ -62,18 +62,6 @@
 			padding: 2px;
 		}
 
-		form label{
-			width: 80px;
- 			display: inline-block;
- 			text-align: right;
- 			margin-right: 5px;
- 			margin-top: 5px;
-		}
-
-		form div{
-			margin-bottom: 5px;
-		}
-
 		.clear {
 			clear: both;
 		}
