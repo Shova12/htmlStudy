@@ -54,7 +54,7 @@
 		#rightContent{
 			float: left;
 		}
-		#img rightContent{
+		#rightContent img{
 			width:300px;
 		}
 		img {
