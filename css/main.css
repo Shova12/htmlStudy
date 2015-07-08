@@ -1,8 +1,9 @@
+0.22 0.35
 * {
 		font-size: 12px;
 	}
 		#mainContainer{
-			border: 1px solid red;
+			border: 5px solid #ddddff;
 			width: 1024px;
 			//margin: 0px auto 0px auto;
 			//margin: 0px auto;
@@ -11,14 +12,14 @@
 		}
 
 		ul {
-
-			padding: 0;
-			margin: 0;
+			padding: 15px;
+			margin: 0px;
 		}
 
 		ul li {
 			list-style: none;
 			display: inline;
+			margin-top: 2px;
 		}
 
 		a {
@@ -27,7 +28,7 @@
 		}
 
 		a:hover {
-			font-size: 14px;
+			font-size: 14px bold;
 			color: #00ff00;
 		}
 
@@ -36,30 +37,29 @@
 		}
 
 		#menu ul li {
-			background-color: #cccccc;
+			font: 14px;
 			width: 200px;
 			padding: 2px 10px;
 			border-right: 2px solid #000000;
+
 		}
-		#content {
+	
+		#content {	
+			float: centre;
 			margin-top: 2px;
 			border-top: 1px solid #000;
 		}
-
-		#leftContent {
-			width: 50%;
-			float: left;
-			padding: 5px;
+		#content p{
+			position: relative;
+			font-weight: 14px;
+			text-align: center;
+			text-decoration: none;
 		}
-		#rightContent{
-			float: left;
-		}
-		#rightContent img{
-			width:300px;
-		}
-		img {
-			border: 1px solid #000;
-			padding: 2px;
+		
+		#content img{
+			position: relative;
+			border: 5px solid #00000;
+			width: 1024px;	
 		}
 
 		form label{
