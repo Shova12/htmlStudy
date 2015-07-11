@@ -3,12 +3,30 @@
 		font-size: 12px;
 	}
 		#mainContainer{
-			border: 5px solid #ddddff;
+			border: 5px solid #00000;
 			width: 1024px;
 			//margin: 0px auto 0px auto;
 			//margin: 0px auto;
 			margin-left: auto;
 			margin-right: auto;
+			-moz-box-shadow: inset 0 0 10px #000000;
+  			-webkit-box-shadow: inset 0 0 10px #000000;
+ 		 	box-shadow: inset 0 0 10px #000000;
+		}
+
+		#container{
+			position: relative;
+			margin: 10px;
+			font-size: 14px bold;
+		}
+		#container p{
+			margin: auto 100px auto 512px;
+			font-size: 20px;
+  			font-weight: bold;
+		}
+		div.top.container{
+			float:left;
+			padding: 20px;
 		}
 
 		ul {
@@ -70,10 +88,27 @@
  			margin-top: 5px;
 		}
 
+		form button{
+			width:100px;
+			vertical-align: top;
+			margin: 5px 5px 15px 100px;
+		}
+
 		form div{
 			margin-bottom: 5px;
 		}
-
+		/*indicate class and # indicate ID*/
 		.clear {
 			clear: both;
 		}
+
+		.leftAlign {
+			text-align: left;
+		}
+
+//name selectoe css
+		/* [name=firstname] {
+			border-color: red;
+		}
+
+		*/

@@ -1,0 +1,129 @@
+<!doctype>
+<html>
+<head>
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+	<div id="mainContainer">
+		<header>
+			<div id="menu">
+				<ul>
+					<li> <a href="index.html" > Home </a> </li>
+					<li> <a href="about.html" >About  </a></li>
+					<li> <a target="_blank" href="gallery.html" > Photo Gallery </a></li>
+					<li> <a target="_blank" href="blogs.html" > Blogs </a></li>
+					<li> <a href="_blank" href="contact_us.html">Contact us </a></li>
+				</ul>
+			</div>
+		</header>
+		<div id="content">
+			<div id ='error_msg'> </div>
+			<form action="#" name="information" method="GET" onSubmit="return validate();">
+					<div>
+						<label class="leftAlign">First name:</label>
+						<input type="text" name="firstname" id="firstname">
+					</div>
+					<div>
+						<label class="leftAlign">Email:</label>
+						<input type="email" name="email">
+					</div>
+					<div>
+						<label>Address:</label>
+						<input type="text" name="address" >
+					</div>
+					<div>
+						<label>City:</label>
+						<input type="text" name="city">
+					</div>
+					<div>
+						<label>State:</label>
+						<select>
+							<option value="NY">NY</option>
+							<option value="NJ">NJ</option>
+							<option value="PA">PA</option>
+						</select>
+					</div>
+					<div>
+						<label>Zipcode:</label>
+						<input type="number" name="zipcode">
+					</div>
+
+					<div>
+						<label>Gender:</label>
+						<input type="radio" value ="Male" name="gender"> Male
+						<input type="radio" value ="Female" name="gender" > Female
+					</div>
+					<div>
+						<button type="submit" name ="submit"> Submit</button>
+					</div>
+
+				</form>
+			</div>
+			<div class="clear"> </div>	
+		</div>
+
+	<div>
+</body>
+<script type="text/javascript" src="js/jquery.js" > </script>
+<script type="text/javascript">
+	//$('[name=firstname]').val('Keshari');
+	//console.log($('form[name=information]').html('fdsds'));
+	function validate() {
+		valid = true;
+		var msg = '';
+		//var firstname = document.getElementById('firstname').value;   //  Javascript method
+		//var firstname = $('#firstname').val();                        // jQuery method by ID method
+		var firstname = $('[name=firstname]').val();                    // jQuery method by name selector
+		if(firstname == '')
+		{
+			msg = "Firstname is empty<br />";
+			valid = false;
+		}
+
+		var email = $('[name=email]').val();
+		if(email == '') {
+		//alert(email); 				
+			msg += "Email is empty<br />";
+			valid = false;
+		}
+
+		var address= $('[name=address]').val();
+		if(address==''){
+		//alert(address);
+			msg+="Address is empty.<br/>";
+			valid = false;
+		}
+
+		var city = $('[name=city]').val();
+		if(city==''){
+			msg+= "City is empty<br/>";
+			valid= false;
+		}
+
+		var zipcode = $('[name=zipcode]').val();
+		if(zipcode ==''){
+			msg+= "Zipcode is empty<br/>";
+			valid= false;
+		}
+
+		var gender = $('[name=gender]').val();
+		if(!$('[name=gender]').is(':checked')){
+		alert(gender);
+			msg+= "Please select gender<br/>";
+			valid= false;
+		}
+
+
+		if(valid == true) {
+			return true;
+		}
+		else {
+			$('#error_msg').html(msg);
+			return false;
+		}
+
+	}
+</script>
+</html>
+
