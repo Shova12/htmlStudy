@@ -2,6 +2,9 @@
 <html>
 <head>
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="js/jquery-ui.css" type="text/css" rel="stylesheet" />
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>	
 
 </head>
 <body>
@@ -14,6 +17,7 @@
 					<li> <a target="_blank" href="gallery.html" > Photo Gallery </a></li>
 					<li> <a target="_blank" href="blogs.html" > Blogs </a></li>
 					<li> <a href="_blank" href="contact_us.html">Contact us </a></li>
+					<li class="login"> <a target="_blank" href="login.html" > Login/Register </a> </li>
 				</ul>
 			</div>
 		</header>
@@ -29,6 +33,10 @@
 						<input type="email" name="email">
 					</div>
 					<div>
+						<label class="leftAlign">DOB:</label>
+						<input type="text" id="dob" name="dateofbirth">
+					</div>
+					<div>
 						<label>Address:</label>
 						<input type="text" name="address" >
 					</div>
@@ -38,7 +46,7 @@
 					</div>
 					<div>
 						<label>State:</label>
-						<select>
+						<select id="state">
 							<option value="NY">NY</option>
 							<option value="NJ">NJ</option>
 							<option value="PA">PA</option>
@@ -55,6 +63,10 @@
 						<input type="radio" value ="Female" name="gender" > Female
 					</div>
 					<div>
+						<label>Comments:</label>
+						<input type="text" value="Enter your comments....." name="comments" maxlength="50">
+					</div>
+					<div>
 						<button type="submit" name ="submit"> Submit</button>
 					</div>
 
@@ -65,7 +77,6 @@
 
 	<div>
 </body>
-<script type="text/javascript" src="js/jquery.js" > </script>
 <script type="text/javascript">
 	//$('[name=firstname]').val('Keshari');
 	//console.log($('form[name=information]').html('fdsds'));
@@ -99,7 +110,7 @@
 		if(city==''){
 			msg+= "City is empty<br/>";
 			valid= false;
-		}
+		}http://localhost/htmlStudy/images/friendship.jpg
 
 		var zipcode = $('[name=zipcode]').val();
 		if(zipcode ==''){
@@ -114,6 +125,13 @@
 			valid= false;
 		}
 
+		var comments=$('[name=comments]').val();
+		if(comments==''){
+		//alert(comments);
+			msg+="Comments box is empty<br/>";
+			valid=false;
+		}
+
 
 		if(valid == true) {
 			return true;
@@ -124,6 +142,12 @@
 		}
 
 	}
-</script>
+	$(document).ready(function() {
+		$("#dob").datepicker();
+		showOtherMonths:true;
+		selectOtherMonths:true
+
+	});
+	</script>
 </html>
 

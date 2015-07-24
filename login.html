@@ -1,0 +1,81 @@
+<!doctype>
+<html>
+<head>
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="js/jquery-ui.css" rel"stylesheet">
+	<script type="text" src="js/jquery.js"></script>
+	<script type="text" src="js/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#email_id').tooltip();
+		})
+	</script>
+</head>
+<body>
+	<div id="mainContainer">
+		<header>
+			<div id="menu">
+				<ul>
+					<li> <a href="index.html" > Home </a> </li>
+					<li> <a href="about.html" >About  </a></li>
+					<li> <a href="gallery.html" > Photo Gallery </a></li>
+					<li> <a target="_blank" href="blogs.html" > Blogs </a></li>
+					<li> <a href="contact_us.html" >Contact us </a></li>
+					<li class="login"><a href="login.html" >Login/Register  </li>
+				</ul>
+			</div>
+				
+		</header>
+		<div id="container">
+			<div class="leftcontent">
+				<h4>Login</h4>
+				<form action="#" name="userinformation" method="GET" onSubmit="return validate();">
+					<div>
+						<label class="leftAlign">Email Id:</label>
+						<input type="text" name="email Id" id="email_id" title="Email id is an electronic mailing between person which is fast.">
+					</div>
+					<div>
+						<label class="leftAlign">Password:</label>
+						<input type="text" name="password" id="password">
+					</div>
+					<div>
+						<input type="button" value="login" onclick="Login(this.form)"> 
+					</div>
+			</div>
+			<div class="rightcontent">	
+				<h4>Register</h4>
+				<form action="#" name="userinformation" method="GET" onSubmit="return validate();">	
+					<div>
+						<label class="leftAlign">Username:</label>
+						<input type="text" name="Username" id="username">
+					</div>
+					<div>
+						<label class="leftAlign">Email Id:</label>
+						<input type="text" name="Email Id">
+					</div>
+					<div>
+						<label class="leftAlign">Conform Email Id:</label>
+						<input type="text" name="conform email id" >
+					</div>
+					<div>
+						<label class="leftAlign">Password:</label>
+						<input type="text" name="password" >
+					</div>
+					<div>
+						<label class="leftAlign">Conform Password:</label>
+						<input type="text" name="conform password" id="conform password">
+					</div>
+
+					<div>
+						<input type="button" value="login" onclick="Login(this.form)"> 
+					</div>
+					
+
+		
+		</div>
+
+			<div class="clear"> </div>	
+		
+</body>
+</html>
+

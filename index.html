@@ -2,6 +2,14 @@
 <html>
 <head>
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="js/jquery-ui.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery.js" > </script>
+	<script type="text/javascript" src="js/jquery-ui.js" > </script>
+	<script>
+		$(document).ready(function() {
+			
+		});
+	</script>
 </head>
 <body>
 	<div id="mainContainer">
@@ -13,17 +21,26 @@
 					<li> <a href="gallery.html" > Photo Gallery </a></li>
 					<li> <a target="_blank" href="blogs.html" > Blogs </a></li>
 					<li> <a target="_blank" href="contact_us.html" >Contact us </a></li>
+					<li class="login"> <a href="login.html" > Login/Register </a> </li>
 				</ul>
 			</div>
+				
 		</header>
 		<div id="container">
 				<p>Traveller</p>
-			<div class="top container">
+			<div class="leftcontainer">
 				<img src="images/travel.jpg" width="500"/>
 			</div>
-			<div class="left container">
-					<p>love travelling.</p>
-				<img src="images/tree.jpg" "width=80"/>
+			<div class="rightcontainer">
+				<label>Sort</label>
+					<select id="price">
+						<option value="high to low">High to low</option>
+						<option value="low to High">Low to High</option>
+						<option value="most popular">Most popular</option>
+						<option value="most New">Most New</option>
+					</select>
+
+					
 			<div>
 		
 		</div>
