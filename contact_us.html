@@ -15,7 +15,7 @@
 					<li> <a href="index.html" > Home </a> </li>
 					<li> <a href="about.html" >About  </a></li>
 					<li> <a target="_blank" href="gallery.html" > Photo Gallery </a></li>
-					<li> <a target="_blank" href="blogs.html" > Blogs </a></li>
+					<li> <a href="blogs.html" > Blogs </a></li>
 					<li> <a href="_blank" href="contact_us.html">Contact us </a></li>
 					<li class="login"> <a target="_blank" href="login.html" > Login/Register </a> </li>
 				</ul>
@@ -64,7 +64,7 @@
 					</div>
 					<div>
 						<label>Comments:</label>
-						<input type="text" value="Enter your comments....." name="comments" maxlength="50">
+						<input type="text" title="Enter your comments here!!" name="comments" maxlength="50">
 					</div>
 					<div>
 						<button type="submit" name ="submit"> Submit</button>
@@ -148,6 +148,9 @@
 		selectOtherMonths:true
 
 	});
+	$(document).ready(function(){
+		$('comments').tooltip();
+	})
 	</script>
 </html>
 

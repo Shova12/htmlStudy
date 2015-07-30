@@ -5,9 +5,27 @@
 	<link href="js/jquery-ui.css" type="text/css" rel="stylesheet" />
 	<script type="text/javascript" src="js/jquery.js" > </script>
 	<script type="text/javascript" src="js/jquery-ui.js" > </script>
-	<script>
+	<script type="text/javascript">
 		$(document).ready(function() {
-			
+			$('#tabs').tabs();
+		});
+
+		$(document).ready(function(){
+			var availabletags = [
+				"Blogs",
+				"British",
+				"Gallery",
+				"Indian",
+				"Inherit",
+				"javascript",
+				"Japan",
+				"Nepal",
+				"Natural",
+				"USA",
+			];
+			$( "#tags" ).autocomplete({
+      			source: availabletags
+    		});
 		});
 	</script>
 </head>
@@ -19,7 +37,7 @@
 					<li> <a href="index.html" > Home </a> </li>
 					<li> <a href="about.html" >About  </a></li>
 					<li> <a href="gallery.html" > Photo Gallery </a></li>
-					<li> <a target="_blank" href="blogs.html" > Blogs </a></li>
+					<li> <a href="blogs.html" > Blogs </a></li>
 					<li> <a target="_blank" href="contact_us.html" >Contact us </a></li>
 					<li class="login"> <a href="login.html" > Login/Register </a> </li>
 				</ul>
@@ -27,25 +45,25 @@
 				
 		</header>
 		<div id="container">
-				<p>Traveller</p>
-			<div class="leftcontainer">
-				<img src="images/travel.jpg" width="500"/>
+				<h3>My page</h3>
+				<label for="tags">Tags:</label>
+				<input id="tags">
+			<div id="tabs">
+				<ul>
+					<li> <a href="#tab1"> Travel </a> </li>
+					<li> <a href="#tab2"> Pregancy </a> </li>
+					<li> <a href="#tab3"> Friendship </a> </li>
+				</ul>
+				<div id="tab1">
+    				<p>Travelling from one place to another is amazing experience, enjoying different inherit culture , tradition and natural and cultural sights of that particular country.And mostly tasting their own food, practically with fresh flavour of their own spices, herbs in food.I had that experience British food, Japanese Food and USA food. I had awaful taste, when I first taste British bread coz I had taste of Asian spicy tonuge.Graudally I started to love food, french bread, Italain Pizza and Pasta, Indian food. So when I was in Japan I was engared to taste Japanese food, sea food. But I found there was variety of food in Japan, sushi, Sashmi, noodle, soup. I love it.</p>
+  				</div>
+ 			 	<div id="tab2">
+   				 	<p>It is loving feeling to carry new living creature inside your body. Nobody will know how you feel. When I was pregant, I was without feeling. We were just me and husband and living baby growing inside me.It is great feeling to see baby growing, growing from peanut to all grown baby.</p>
+ 			 	</div>
+  				<div id="tab3">
+    				<p> Friendship sail without engine. It is hard to get unconditional friends in your life. In our life we can have only very few friends like that, who is understand you, love you and stand on your feet. Long hour unrelated talk but still love own argument and walk freely, dance in own tunes, have own world where sky is blue everytime, sun is always cool, river is always clear and flowing, moon is always bright between shining star, and mother nature always favour you.  </p>
+ 				 </div>	
 			</div>
-			<div class="rightcontainer">
-				<label>Sort</label>
-					<select id="price">
-						<option value="high to low">High to low</option>
-						<option value="low to High">Low to High</option>
-						<option value="most popular">Most popular</option>
-						<option value="most New">Most New</option>
-					</select>
-
-					
-			<div>
-		
-		</div>
-
-			<div class="clear"> </div>	
 		
 </body>
 </html>

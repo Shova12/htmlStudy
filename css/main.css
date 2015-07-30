@@ -19,20 +19,16 @@
 			margin: 10px;
 			font-size: 14px bold;
 		}
-		#container p{
-			margin: auto 100px auto 512px;
-			font-size: 20px;
-  			font-weight: bold;
+		div #container label{
+			margin-bottom: 15px;
 		}
-		select#price{
-			float:right;
+		#tabs{
+			text-align: justify;
+			font:-webkit-control;
+			margin-top: 20px;
 		}
-		.rightcontainer label{
-			margin-left: 320px;
-		}
-		div.leftcontainer{
-			float:left;
-			padding: 20px;
+		#tabs ul li{
+			margin-right: 2px;
 		}
 
 		ul {
@@ -49,7 +45,7 @@
 		li.login{
 			float:right;
 			font-size: 12px;
-			border: 0px;
+			margin-right: -13%;
 		}
 
 		a {
@@ -70,8 +66,6 @@
 			font: 14px;
 			width: 200px;
 			padding: 2px 10px;
-			border-right: 2px solid #000000;
-
 		}
 	
 		#content {	
@@ -89,6 +83,16 @@
 		h3{
 			margin: 5px 300px 5px 450px;
 		}
+		div #blogs img{
+			width:49%;
+			padding:5px;
+		}
+
+		div #blogs p{
+			text-align: justify;
+			width:49%;
+			padding:5px;
+		}
 		p{
 			padding:10px;
 		}
@@ -105,13 +109,21 @@
 			margin: 10px 500px 5px 400px;
 
 		}
+		h4{
+			text-align: center;
+			text-decoration: underline;
+		}
 		div.rightcontent{
-			margin:	2px 200px;
+			margin:	2px 60px 10px auto;
 			float: right;
+			width:44%;
+			display: table;
+			font-size: 16px;
 		}
 
 		div.leftcontent{
 			float:left;
+
 		}
 		
 		form label{
@@ -120,6 +132,7 @@
  			text-align: right;
  			margin-right: 5px;
  			margin-top: 5px;
+ 			padding:5px;
 		}
 		form button{
 			width:100px;
@@ -130,14 +143,24 @@
 		form div{
 			margin-bottom: 5px;
 		}
+		form#registration{
+			color:#0C0E0C;
+			text-align: center;
+			border-left: 2px solid gray;
+		}
+		form#login{
+			text-align: center;
+			font-size: 16px;
+		}
 		/*indicate class and # indicate ID*/
 		.clear {
 			clear: both;
 		}
-
-		.leftAlign {
-			text-align: left;
+		.rightAlign{
+			text-align: center;
 		}
+
+		
 
 //name selectoe css
 		/* [name=firstname] {

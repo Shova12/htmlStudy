@@ -2,73 +2,8 @@
 <html>
 <head>
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
-	<style>
-	ul.enlarge{
-		list-style-type: none;
-	}
-	ul.enlarge li{
-		display: inline-block;
-		position: relative;
-		z-index: :0;
-		margin: 10px 40px -50px -20px; 
-	}
-	ul.enlarge span{
-		position: relative;
-		left: -9999px;
-	}
-	ul.enlarge img{
-		background-color: ##eae9d4;
-		padding: 2px;
-		-webkit-box-shadow: 0 0 6px rgba(132, 132, 132, .75);
-		-moz-box-shadow: 0 0 6px rgba(132, 132, 132, .75);
-		box-shadow: 0 0 6px rgba(132, 132, 132, .75);
-	/*and give the corners a small curve*/
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;
-	}
-	ul.enlarge li:hover{
-		z-index: 50; /*places the popups infront of the thumbnails, which we gave a z-index of 0 in step 1*/ 
-		cursor:pointer; /*changes the cursor to a hand*/
-	}
-		/***We bring the large image back onto the page by reducing left from -9999px (set in step 2) to figures below***/ 
-	ul.enlarge li:hover span{ /*positions the <span> when the <li> (which contains the thumbnail) is hovered*/ 
-		top: -300px; /*the distance from the bottom of the thumbnail to the top of the popup image*/
-		left: -20px; /*distance from the left of the thumbnail to the left of the popup image*/
-	}
-		/***To make it look neater we used :nth-child to set a different left distance for each image***/ 
-	ul.enlarge li:hover:nth-child(2) span{
-		left: -100px; 
-	}
-	ul.enlarge li:hover:nth-child(3) span{
-		left: -200px; 
-	}
-
-	ul.enlarge span img{
-		padding: 2px; /*size of the frame*/
-		background: #ccc; /*colour of the frame*/
-	}
-		/***Style the <span> containing the framed images and the caption***/
-	ul.enlarge span{
-		/**Style the frame**/
-		padding: 10px; /*size of the frame*/
-		background:#eae9d4; /*colour of the frame*/
-		/*add a drop shadow to the frame*/
-		-webkit-box-shadow: 0 0 20px rgba(0,0,0, .75));
-		-moz-box-shadow: 0 0 20px rgba(0,0,0, .75);
-		box-shadow: 0 0 20px rgba(0,0,0, .75);
-		/*give the corners a curve*/
-		-webkit-border-radius: 8px;
-		-moz-border-radius: 8px;
-		border-radius:8px;
-			/**Style the caption**/
-		font-family: 'Droid Sans', sans-serif; /*Droid Sans is available from Google fonts*/
-		font-size:.9em;
-		text-align: center;
-		color: #495a62;
-	}
-
-	</style>
+	
+	
 </head>
 <body>
 	<div id="mainContainer">
@@ -78,46 +13,20 @@
 					<li> <a href="index.html" > Home </a> </li>
 					<li> <a href="about.html" >About</a></li>
 					<li> <a target="_blank" href="gallery.html" > Photo Gallery </a></li>
-					<li> <a target="_blank" href="blogs.html" > Blogs </a></li>
+					<li> <a href="blogs.html" > Blogs </a></li>
 					<li> <a target="_blank" href="contact_us" >Contact us </a></li>
 					<li class="login"> <a target="_blank" href="login.html" > Login/Register </a> </li>
 				</ul>
 			</div>
 		</header>
-			<ul class="enlarge">
-						<li>
-							<img src="images/friendship.jpg"  width="150" heigth="100" alt="friendship"/> 
-							<span>
-								<img src="images/friendship.jpg" alt="friendship"/>
-								<br/>Friend
-							</span>
-						</li>
-
-						<li>
-							<img src="images/friendship_1.jpg" width="150" heigth="100" alt="friendship_1"  />
-							<span>
-								<img src="images/friendship_1.jpg" alt="friendship_1"/>
-								<br/> Happiness
-							</span>
-						</li>
-
-						<li>
-							<img src="images/friendship_2.jpg" width="150" heigth="100" alt="friendship_2"  /> 
-							<span>
-								<img src="images/friendship_2.jpg" alt="friendship_2"/>
-								<br/>Joyful
-							</span>
-						</li>
-
-						<li>
-							<img src="images/friendship_3.jpg" width="150" heigth="100" alt="friendship_3"  /> 
-							<span>
-								<img src="images/friendship_3.jpg" alt="friendship_3"/>
-								<br/>Bonding
-							</span>
-						</li>
-					
-					</ul>
+		<div id="container">
+			<div id="blogs">
+				<h3>MY BLOGS</h3>
+					<p>Cherry Tree</p>
+						<img src="images/cherry.jpg"/><p>Today, 3rd  of June 2011 and 24 degree outside. I am enjoying starting of summer in London,since my initial plan to go British Library was cancelled.. I was pepping through my room's window with some music on my mobile. My flavour was music with reading novel sitting on park with sun above me and wind  wishpering to my ear n blowing my hair. However, today being my day off. I am unable to go park with "The Choice " by Susan Lewis. Therefore I am at my room, Watford- Way, Hendon, near highway 20 minutes walk from Hendon tube station. There is  rows of two-bed room houses.</br>After I had spent half day playing with my lovable,wonderful small netbook. I was just sitting near by my window to finish my pending work. But something drag to write this. Vividly, I can see two green and healthy Cherry trees with red color on it's tip. Initially I thought it was flower but  just remember 1 month ago, white flower blooming on it as if white carpet. It was really amazing view through my window.These tree used to light at night. Then, I realised it is Cherry trying to pircering with greenish red. OMG!!! a bared tree had given fruit tooday. On the end of Autumn, they were naked and then after covered with white snow. When I used go to take bus, it used to shine on Moon to show my way. I am very thankful to u.I dont realised time but it had left me 1 years back...I mean I am 1 year old with new experience and lots of thought on me. 'em wondering that me time passed so quick that I dont realised how can i managed to be away from family all most 20months. Really!!!!it is wonderful to live for oneself, enjoyed freedom, think about oneself though it is selfness in the eye of world. Actually, I would like to named as "SELF" life.</br> <img src="images/quard.jpg"/> I can remember September 2009, when for first time I left my home and came to land where there is nobody with zero idea and vancant heart. Those days in Uni(University) was marvellous and remains in my memory forever. Getting up at 8am and get ready, hurry for Uni. And I cant forget my econometric class, always rush to get attended. We used( me and my friend Grish)to be  late coz of crazy facebooking ...... hehehhehehhehehehehehe.... Anyhow we managed ourself(6s- Pinky,Grish,me,Hemu,Bimlii(sorry la), Nishan) in mid-row  and our attended, our murmur. If I am not mistake then  I just miss 1 day attendation but never miss her(Michella) class. She was  wonderful lady, who tried her best effort to give good knoweldge of econometric.coz of her I could do best and this module is one of my vain till now.Apparently, this model was seemed to be most hard. And yeaaa no doubt it was really hard to understand regression, interptation, beta and alpha coefficientttttsss and lots of regressionss..ssss on slide. OMG!!!my mind went to spining for whole days when I try to interptation R-square and correlation cofficient. I muddled both of them....and specially probabilty figure ....I mean p-value(right value and left value)....anyway  I coped with it.The most hardest class was dummy.....very very confussing...... I am very thankful to u Ashi.....it's all because of u that I had done... u inspired me and taugth me lesson...support me in all way....dicussion, combined study all those stuffs gave me strength on those days....u are angle for me.i dont word to thx u as well... I can remember September 2009, when for first time I left my home and came to land where there is nobody with zero idea and vancant heart. Those days in Uni(University) was marvellous and remains in my memory forever. Getting up at 8am and get ready, hurry for Uni. And I cant forget my econometric class, always rush to get attended. We used( me and my friend Grish)to be  late coz of crazy facebooking......hehehhehehhehehehehehe....Anyhow we managed ourself(6s- Pinky,Grish,me,Hemu,Bimlii(sorry la), Nishan) in mid-row  and our attended, our murmur. If I am not mistake then  I just miss 1 day attendation but never miss her(Michella) class. She was  wonderful lady, who tried her best effort to give good knoweldge of econometric.coz of her I could do best and this module is one of my vain till now.Apparently, this model was seemed to be most hard. And yeaaa no doubt it was really hard to understand regression, interptation, beta and alpha coefficientttttsss and lots of regressionss..ssss on slide. OMG!!!my mind went to spining for whole days when I try to interptation R-square and correlation cofficient. I muddled both of them....and specially probabilty figure ....I mean p-value(right value and left value)....anyway  I coped with it.The most hardest class was dummy.....very very confussing...... I am very thankful to u Ashi.....it's all because of u that I had done... u inspired me and taugth me lesson...support me in all way....dicussion, combined study all those stuffs gave me strength on those days....u are angle for me.i dont word to thx u as well... <img src="images/happiness.jpg" /> <br> After econometric class we used sit down for seminar and do some exercise then Banking class....Oh god!! sweet voice near drag us to sleep. I am sorry for that(tutor). But it was true. may be either her sweet voice or may our lunch since it was after our lunch time, drags us in our dreamland. It was interesting class talking about international Banks, model or I mean modelling them.Our day used to end with end of Banking lecture, very excitied to go back to home and had our dinner.Unluckily!! now nobody is there to wait for us to served meal. So we had to feed  ourself.It was quite interesting but sometime I really miss U MUM and foods always waiting for me.Sometime we used to gather to Puris' Hostel to have dinner together. Oh!! sorry she is also one of our friend from Marketing. We had to be thankful to her for providing sweet and warm accomdations and food  whenevery necessary.</br>As next day begins same routine, rushed for 186....shit bus missed, waited for next. and again late for co-operate lecture. Actually it was not problem for us coz he was not tight for attend. Nishan nearly appared in class....I mean either he is late or went to sleep at morning...so cant wake on morning...n his excuse was " bal chhaina" means whatever gone, no problem for him...sorry dear Nishan. But ur were only spirit of our group, who makes us to do job clam specially on assisgment period.I am thankful to u as well to provide clamness on assisgment period. I cant forget You Hemu, who tried to stop our facebooking n ur were amazing in our group specially in software. N Bimlli (Bimal,plz dont be angry) i know u wont mind... lol.... ur discussion and arugment had increase my knoweldge. Pinky,really missing u...ur  such a sweet and cool lady that I ever had seen..... Grish...black  beauty gal with sexy eyes(i dont know i should say here or not....if my words are bitter plz plz forgive me) i cant forget u forever....u were first friend to share my room after my sis. Yea!!! I was bit bossy to u....sorry for that dear...I should have known about ur freedom....but how we had spent, delicious and mouth watering foods, ur deliberating doing stuffs  will never gone to erase from my memory...... </p>
+			</div>
+		</div>
+			
 			<div class="clear"> </div>	
 		
 </body>
