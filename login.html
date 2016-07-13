@@ -1,0 +1,134 @@
+<!doctype>
+<html>
+<head>
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="js/jquery-ui.css" rel="stylesheet">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<style type="text/css">
+	body {
+		font-size: 14px bold;
+		color: #000;
+		padding: 0px;
+		margin: 0px;
+	}
+	form {
+		color: #00ff00;
+	}
+	form#login {
+		color: #000;
+	}
+	.hide {
+		display: none;
+	}
+	.login_disable {
+		border: 1px solid #00FF00;
+	}
+
+	.test {
+		font-size: 18px;
+	}
+
+	.class2 {
+		color: #ff0000;
+	}
+
+	.class3 {
+		color: #00ff00;
+	}
+	</style>
+	<script type="text/javascript">
+		function login() {
+			$("#registration").addClass('hide');
+		}
+		function registration() {
+			$("#login").addClass('login_disable class2');
+			$("#login").removeAttr('name');
+			$("#login").attr('name','form_login');
+		};
+		login();
+
+		$(document).ready(function(){
+			$('#email_id').tooltip();
+		})
+		
+
+		$function (){	
+			$(#'email_id').tooltip({
+				show:{
+					effect:"sildeDown";
+					delay:250	
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+	<div id="mainContainer">
+		<header>
+			<div id="menu">
+				<ul>
+					<li> <a href="index.html" > Home </a> </li>
+					<li> <a href="about.html" >About  </a></li>
+					<li> <a href="gallery.html" > Photo Gallery </a></li>
+					<li> <a href="blogs.html" > Blogs </a></li>
+					<li> <a href="contact_us.html" >Contact us </a></li>
+					<li class="login"><a href="login.html" >Login/Register </a></li>
+				</ul>
+			</div>
+				
+		</header>
+		<div id="container">
+			<div class="leftcontent">
+				<h4>Login</h4>
+				<form action="#" name="login" id="login" method="GET" onSubmit="return validate();" class ="test">
+					<div>
+						<label class="leftAlign">Email Id:</label>
+						<input type="text" name="email Id" id="email_id" title="Email id is an electronic mailing between person which is fast.">
+					</div>
+					<div>
+						<label class="leftAlign">Password:</label>
+						<input type="text" name="password" id="password">
+					</div>
+					<div>
+						<input type="button" value="login" onclick="login()"> 
+					</div>
+				</form>	
+			</div>
+			<div class="rightcontent">	
+				
+				<form action="#" name="registration" method="GET" onSubmit="return validate();" id="registration">	
+					<h4>Registration</h4>
+					<div>
+						<label class="rightAlign">Username:</label>
+						<input type="text" name="Username" id="username">
+					</div>
+					<div>
+						<label class="rightAlign">Email Id:</label>
+						<input type="text" name="Email Id">
+					</div>
+					<div>
+						<label class="rightAlign">Conform Email Id:</label>
+						<input type="text" name="conform email id" >
+					</div>
+					<div>
+						<label class="rightAlign">Password:</label>
+						<input type="text" name="password" >
+					</div>
+					<div>
+						<label class="rightAlign">Conform Password:</label>
+						<input type="text" name="conform password" id="conform password">
+					</div>
+
+					<div>
+						<input type="button" value="login" onclick="registration()"> 
+					</div>
+					
+				</form>	
+			</div>
+
+			<div class="clear"> </div>	
+		
+</body>
+</html>
+
