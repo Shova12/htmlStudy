@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="js/jquery-ui.css" type="text/css" rel="stylesheet" />
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>	
+
+</head>
+<body>
+	<div id="mainContainer">
+		<header>
+			<div id="menu">
+				<ul>
+					<li> <a href="index.html" > Home </a> </li>
+					<li> <a href="about.html" >About  </a></li>
+					<li> <a href="gallery.html" > Photo Gallery </a></li>
+					<li> <a href="blogs.html" > Blogs </a></li>
+					<li> <a href="contact_us.html">Contact us </a></li>
+					<li class="login"> <a target="_blank" href="login.html" > Login/Register </a> </li>
+				</ul>
+			</div>
+		</header>
+		<div id="content">
+			<div id ='error_msg'> </div>
+			<form action="#" name="information" method="GET" onSubmit="return validate();">
+					<section>
+						<label class="leftAlign">First name:</label>
+						<input type="text" name="firstname" id="firstname" placeholder="your name" required>
+					</section>
+					<section>
+						<label class="leftAlign">Email:</label>
+						<input type="email" name="email" title="email(format: xxx@xxx.xxx)" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required/ >
+					</section>
+					<div>
+						<label class="leftAlign">DOB:</label>
+						<input type="date" id="dob" name="dateofbirth"  max="2001-12-30" required/ >
+					</div>
+					<div>
+						<label>Address:</label>
+						<input type="text" name="address" >
+					</div>
+					<div>
+						<label>City:</label>
+						<input type="text" name="city">
+					</div>
+					<div>
+						<label>State:</label>
+						<select id="state">
+							<option value="NY">NY</option>
+							<option value="NJ">NJ</option>
+							<option value="PA">PA</option>
+							<option value ="MA">MA</option
+								>
+						</select>
+					</div>
+					<div>
+						<label>Zipcode:</label>
+						<input type="number" name="zipcode">
+					</div>
+					<div>
+						<label>Phone Number</label>
+						<input type="tel" pattern= "\d{3}[\-]\d{3}[\-]\d{4}" required >
+					</div>
+
+					<div>
+						<label>Gender:</label>
+						<input type="radio" value ="Male" name="gender"> Male
+						<input type="radio" value ="Female" name="gender" > Female
+					</div>
+					<div>
+						<label>Comments:</label>
+						<textarea name="comments" id="comments"> </textarea>
+					</div>
+					<div>
+						<button type="submit" name ="submit"> Submit</button>
+					</div>
+
+				</form>
+			</div>
+			<div class="clear"> </div>	
+		</div>
+
+	<div>
+</body>
+<script type="text/javascript">
+	//$('[name=firstname]').val('Keshari');
+	//console.log($('form[name=information]').html('fdsds'));
+	function validate() {
+		valid = true;
+		var msg = '';
+		//var firstname = document.getElementById('firstname').value;   //  Javascript method
+		//var firstname = $('#firstname').val();                        // jQuery method by ID method
+		var firstname = $('[name=firstname]').val();                    // jQuery method by name selector
+		if(firstname == '')
+		{
+			msg = "Firstname is empty<br />";
+			valid = false;
+		}
+
+		var email = $('[name=email]').val();
+		if(email == '') {
+		//alert(email); 				
+			msg += "Email is empty<br />";
+			valid = false;
+		}
+
+		var address= $('[name=address]').val();
+		if(address==''){
+		//alert(address);
+			msg+="Address is empty.<br/>";
+			valid = false;
+		}
+
+		var city = $('[name=city]').val();
+		if(city==''){
+			msg+= "City is empty<br/>";
+			valid= false;
+		}http://localhost/htmlStudy/images/friendship.jpg
+
+		var zipcode = $('[name=zipcode]').val();
+		if(zipcode ==''){
+			msg+= "Zipcode is empty<br/>";
+			valid= false;
+		}
+
+		var gender = $('[name=gender]').val();
+		if(!$('[name=gender]').is(':checked')){
+		//alert(gender);
+			msg+= "Please select gender<br/>";
+			valid= false;
+		}
+
+		var comments=$('[name=comments]').val();
+		if(comments==''){
+		//alert(comments);
+			msg+="Comments box is empty<br/>";
+			valid=false;
+		}
+
+
+		if(valid == true) {
+			return true;
+		}
+		else {
+			$('#error_msg').html(msg);
+			return false;
+		}
+
+	}
+	/*$(document).ready(function() {
+		$("#dob").datepicker();
+		showOtherMonths:true;
+		selectOtherMonths:true
+
+	});*/
+	$(document).ready(function(){
+		$('comments').tooltip();
+	})
+
+		
+	</script>
+</html>
+

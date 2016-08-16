@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<style>
+	h1{
+		font-family: cursive;
+		font-size: 30px;
+		font-style: normal;
+		margin: 5px auto 5px 425px;
+		color:rgb(231, 130, 46);
+		text-transform: capitalize;
+		text-decoration: none;
+		text-shadow: 4px 2px 4px #B2081B;
+	}
+
+	div.img {
+		margin:5px auto 5px 120px;
+		padding:5px;
+    	float: left;
+    	text-align: center;
+    	font-size: 20px;
+    	-moz-box-shadow: inset 5px 5px 5px #B28308;
+  		-webkit-box-shadow: inset 5px 5px 5px #B28308;
+    	box-shadow: 5px 5px 5px #B28308;
+	}
+	
+	div.img img{
+		border: 2px blue;
+		border-style:solid;
+		display:inline-block;
+	}
+	div.img a:hover img {
+		border: 1px solid #00dddd;
+	}
+	div.desc{
+		font-family:inherit;
+		text-align: center;
+		font-size: 15px;
+	}
+	#full_image{
+		margin: 20px 200px 5px 200px;
+		padding:10px;
+	}
+	</style>
+	<link href="js/jquery-ui.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript">
+	function full_image(t) 
+	{
+		new_src = $(t).attr('src');
+		$("#full_image img").attr('src',new_src);
+		return false;
+	}
+	
+	</script>
+</head>
+<body>
+	<div id="mainContainer">
+		<header>
+			<div id="menu">
+				<ul>
+					<li> <a href="index.html" > Home </a> </li>
+					<li> <a href="about.html" >About </a></li>
+					<li> <a href="gallery.html" > Photo Gallery </a></li>
+					<li> <a href="blogs.html" > Blogs </a></li>
+					<li> <a href="contact_us.html" >Contact us </a></li>
+					<li class="login"> <a href="login.htmlRegister"> Login/Register </a> </li>
+				</ul>
+			</div>
+		</header>
+		<div id="content1">
+			<h1>Gallerypage</h1>
+			<div id="full_image">
+				<div class="desc">Friendship</div>
+				<img src="images/friendship.jpg" width="540px" />
+			</div>	
+			<div class="image_list">
+				<div class="img">
+			 			<img src="images/friendship.jpg" alt="friendship" width="100"  onclick="return full_image(this)"/> 
+			 		<div class="desc"> Friends</div>
+				</div>
+
+				<div class="img">
+						<img src="images/friendship_1.jpg" alt="friendship_1" width="100" onclick="return full_image(this)"/>
+					<div class="desc">Joyful moment</div>
+				</div>
+				<div class="img">
+					<img src="images/friendship_2.jpg" alt="friendship_2.jpg" width="100" onclick="return full_image(this)"/>
+					<div class="desc">Honest friend</div>
+				</div>
+				<div class="img">
+						<img src="images/friendship_3.JPG" alt="friendship_3.JPG" width="100" onclick="return full_image(this)"/>
+					<div class="desc">A bond of love</div>	
+				</div>
+			</div>	
+			<div class="clear"> </div>	
+		</div>
+	</div>
+</body>
+</html>
+
+			
+			
+			
