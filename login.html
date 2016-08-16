@@ -1,6 +1,7 @@
-<!doctype>
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
 	<link href="js/jquery-ui.css" rel="stylesheet">
 	<script src="js/jquery.js"></script>
@@ -36,6 +37,11 @@
 	.class3 {
 		color: #00ff00;
 	}
+
+	.errmsg {
+		background-color: #336699;
+		color: #FF0000;
+	}
 	</style>
 	<script type="text/javascript">
 		function login() {
@@ -46,21 +52,38 @@
 			$("#login").removeAttr('name');
 			$("#login").attr('name','form_login');
 		};
-		login();
+		//login();
+
+		function validate(){
+				//console.log('I m called');
+				vaild = true;
+				var msg = '';
+				var Username = $('[name=Username]').val();  
+				if(Username == '')
+				{
+					msg = "Username is empty<br />";
+					valid = false;
+				}
+				$("#errmsg").html(msg);
+			
+			}	
 
 		$(document).ready(function(){
 			$('#email_id').tooltip();
-		})
-		
 
-		$function (){	
-			$(#'email_id').tooltip({
-				show:{
-					effect:"sildeDown";
-					delay:250	
-				}
-			});
-		}
+		/*	function (){	
+				$(#'email_id').tooltip({
+					show:{
+						effect:"sildeDown";
+						delay:250	
+					}
+				});
+		
+		//})	
+		*/
+					
+	});
+	
 	</script>
 </head>
 <body>
@@ -81,49 +104,56 @@
 		<div id="container">
 			<div class="leftcontent">
 				<h4>Login</h4>
+				<div id="errmsg" class="errmsg"> </div>
 				<form action="#" name="login" id="login" method="GET" onSubmit="return validate();" class ="test">
 					<div>
-						<label class="leftAlign">Email Id:</label>
-						<input type="text" name="email Id" id="email_id" title="Email id is an electronic mailing between person which is fast.">
+						<label class="leftAlign">Username:</label>
+						<input type="text" name="Username" id="Username" title="Email id is an electronic mailing between person which is fast.">
 					</div>
 					<div>
 						<label class="leftAlign">Password:</label>
 						<input type="text" name="password" id="password">
 					</div>
 					<div>
-						<input type="button" value="login" onclick="login()"> 
+						<input type="button" value="login" onclick="return validate();"> 
 					</div>
 				</form>	
 			</div>
 			<div class="rightcontent">	
 				
-				<form action="#" name="registration" method="GET" onSubmit="return validate();" id="registration">	
-					<h4>Registration</h4>
-					<div>
-						<label class="rightAlign">Username:</label>
-						<input type="text" name="Username" id="username">
-					</div>
-					<div>
-						<label class="rightAlign">Email Id:</label>
-						<input type="text" name="Email Id">
-					</div>
-					<div>
-						<label class="rightAlign">Conform Email Id:</label>
-						<input type="text" name="conform email id" >
-					</div>
-					<div>
-						<label class="rightAlign">Password:</label>
-						<input type="text" name="password" >
-					</div>
-					<div>
-						<label class="rightAlign">Conform Password:</label>
-						<input type="text" name="conform password" id="conform password">
-					</div>
+				<form action="#" name="registration" method="GET" id="registration" >
+					<fieldset>
+						<h4>Registration</h4>
+						<section>
+							<label class="rightAlign">Username:</label>
+							<input type="text" required pattern="\w+" name="username" >
+						</section>
+						<section>
+							<label class="rightAlign">Email Id:</label>
+							<input type="email" name="email" title="email(format: xxx@xxx.xxx)" required>
+						</section>
+						<section>
+							<label class="rightAlign">Confirm Email Id:</label>
+							<input type="confirmemail" name="confirm email" required>
+						</section>
+						<section>
+							<label class="rightAlign">Password:</label>  
+							<input title="Password must contain at least 6 characters or any symbol(@,#,%,$]),including UPPER/lowercase and numbers" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.[@,#,%,$]).{6,}" name="pwd1" onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title: '');
+								if (this.checkValidity())form.pwd2.pattern = this.value;">
+						</section>
+						<section>
+							<label class="rightAlign">Confirm Password:</label>
+							 <input type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])?=.[@,#,%,$]).{6,}" name="pwd2" onchange="this.validity.patterMisMatch ? this.title:'')">
+						</section>
+						<section>
+							<label class="rightAlign">DOB</label>
+							<input type="date" name="dateofbirth" id="dateofbirth" max="2001-12-30" required>
+						</section>
 
-					<div>
-						<input type="button" value="login" onclick="registration()"> 
-					</div>
-					
+						<section>
+							<button type="submit" class="pure-button pure-button-primary"> Sign up</button>
+						</section>
+					</fieldset>
 				</form>	
 			</div>
 

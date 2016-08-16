@@ -1,4 +1,4 @@
-<!doctype>
+<!doctype html>
 <html>
 <head>
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
@@ -24,17 +24,17 @@
 		<div id="content">
 			<div id ='error_msg'> </div>
 			<form action="#" name="information" method="GET" onSubmit="return validate();">
-					<div>
+					<section>
 						<label class="leftAlign">First name:</label>
-						<input type="text" name="firstname" id="firstname">
-					</div>
-					<div>
+						<input type="text" name="firstname" id="firstname" placeholder="your name" required>
+					</section>
+					<section>
 						<label class="leftAlign">Email:</label>
-						<input type="email" name="email">
-					</div>
+						<input type="email" name="email" title="email(format: xxx@xxx.xxx)" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required/ >
+					</section>
 					<div>
 						<label class="leftAlign">DOB:</label>
-						<input type="text" id="dob" name="dateofbirth">
+						<input type="date" id="dob" name="dateofbirth"  max="2001-12-30" required/ >
 					</div>
 					<div>
 						<label>Address:</label>
@@ -50,11 +50,17 @@
 							<option value="NY">NY</option>
 							<option value="NJ">NJ</option>
 							<option value="PA">PA</option>
+							<option value ="MA">MA</option
+								>
 						</select>
 					</div>
 					<div>
 						<label>Zipcode:</label>
 						<input type="number" name="zipcode">
+					</div>
+					<div>
+						<label>Phone Number</label>
+						<input type="tel" pattern= "\d{3}[\-]\d{3}[\-]\d{4}" required >
 					</div>
 
 					<div>
@@ -64,7 +70,7 @@
 					</div>
 					<div>
 						<label>Comments:</label>
-						<textarea name="comments" id="comments">comment here......</textarea>
+						<textarea name="comments" id="comments"> </textarea>
 					</div>
 					<div>
 						<button type="submit" name ="submit"> Submit</button>
@@ -120,7 +126,7 @@
 
 		var gender = $('[name=gender]').val();
 		if(!$('[name=gender]').is(':checked')){
-		alert(gender);
+		//alert(gender);
 			msg+= "Please select gender<br/>";
 			valid= false;
 		}
@@ -142,15 +148,17 @@
 		}
 
 	}
-	$(document).ready(function() {
+	/*$(document).ready(function() {
 		$("#dob").datepicker();
 		showOtherMonths:true;
 		selectOtherMonths:true
 
-	});
+	});*/
 	$(document).ready(function(){
 		$('comments').tooltip();
 	})
+
+		
 	</script>
 </html>
 

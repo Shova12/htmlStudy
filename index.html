@@ -1,4 +1,4 @@
-<!doctype>
+<!doctype html>
 <html>
 <head>
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
@@ -10,13 +10,11 @@
 			$('#menu li').hover(
 			function(){
 				$(this).addClass('active');
-			},
+			//},
 
-			function(){
+			//function(){
 				$(this).removeClass('active');
-			}
-
-  			);
+			});
 		});
 		$(document).ready(function() {
 			$('#tabs').tabs();
@@ -60,6 +58,14 @@
 				<h3>My page</h3>
 				<label for="tags">Tags:</label>
 				<input id="tags">
+			<div id="rightcontent">	
+				<form action="#">
+  					Search Google:
+  					<input type="search" name="googlesearch">
+ 			 		<input type="submit">
+				</form>
+			</div>
+
 			<div id="tabs">
 				<ul>
 					<li> <a href="#tab1"> Travel </a> </li>
@@ -76,6 +82,12 @@
     				<p> Friendship sail without engine. It is hard to get unconditional friends in your life. In our life we can have only very few friends like that, who is understand you, love you and stand on your feet. Long hour unrelated talk but still love own argument and walk freely, dance in own tunes, have own world where sky is blue everytime, sun is always cool, river is always clear and flowing, moon is always bright between shining star, and mother nature always favour you.  </p>
  				 </div>	
 			</div>
+			<section>
+				<video width ="400" controls>
+					<source src ="Choro.mp4" type="video/mp4">
+				</video>
+			</section>
+
 			<div id="social">
 				<a href="https://www.facebook.com/shova.prajapati1" >
 					<img src="http://static.viewbook.com/images/social_icons/facebook_32.png" />
